@@ -1,5 +1,10 @@
 //@description Init vars
 
+if(instance_number(oPlayerStats)>1){
+	instance_destroy();
+}
+
+
 //display_set_gui_size(view_wview[0],view_hview[0]);
 enum Powers{
 	none,

@@ -4,6 +4,8 @@ draw_set_color(c_black);
 draw_set_font(Cooper);
 draw_text(30,20,string_hash_to_newline(hp));
 draw_text(30,40,string_hash_to_newline(coins));
+//draw_text(30,60,string_hash_to_newline(oPlayer.x-(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])) ));
+draw_text(30,60,string_hash_to_newline(oPlayer.x-camera_get_view_x(view_camera[0])));
 draw_set_color(c_white);
 
 var guiH = display_get_gui_height();

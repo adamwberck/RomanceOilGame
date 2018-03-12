@@ -40,7 +40,8 @@ draw_set_color(c_green);
 draw_arrow(x,y,x+(vx*10),y+(vy*10),7);
 draw_set_color(c_white);
 
-draw_sprite_ext(sprite_index,image_number,x,y,facing*-1,1,0,c_white,1);
+
+draw_sprite_ext(sprite_index,image_index,x,y,facing*-1,1,0,c_white,1);
 
 
 /*

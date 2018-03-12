@@ -1,5 +1,8 @@
 /// @description  Variables
 
+
+focus = instance_create(x,y,oFocus);
+
 trail = ds_list_create();
 
 ANIMATION_SPD = .5;

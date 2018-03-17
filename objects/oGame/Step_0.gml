@@ -9,6 +9,12 @@ kPrev    = keyboard_check_pressed(vk_pagedown) || gamepad_button_check_pressed(0
 kNext    = keyboard_check_pressed(vk_pageup)      || gamepad_button_check_pressed(0, gp_shoulderrb);
 kLedge   = keyboard_check_pressed(ord("L"));
 kLedgeM  = keyboard_check_pressed(ord("K"));
+kPCheck  = keyboard_check_pressed(ord("P"));
+
+if(kPCheck){
+	oldSchool = !oldSchool;
+}
+
 
 if(kLedge)
     oEnemyG.ledgecheck++;

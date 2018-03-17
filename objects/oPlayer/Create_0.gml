@@ -1,7 +1,7 @@
 /// @description  Variables
 
 
-focus = instance_create(x,y,oFocus);
+screenWrap = false;
 
 trail = ds_list_create();
 
@@ -26,12 +26,12 @@ o = false;
 // Movement ///////////////////////////////////////////////////////////////////
 #region
 slope       = 0   ;
-groundAccel = 1/15;
+groundAccel = 0.0546875;
 dSlopeAccel = 1/8 ;
 vxAccelSlide= 1/8 ;
-groundFric  = 1/15;
+groundFric  = 0.0546875;
 groundSkid  = 1/8 ;
-airAccel    = 1/15;
+airAccel    = 0.0546875;
 airFric     = 0.00;
 airSkid     = 1/8;
 vxMax       = 2.5;

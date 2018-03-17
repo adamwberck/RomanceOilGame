@@ -29,16 +29,48 @@ kHit           = keyboard_check_pressed(ord("Z"))  || gamepad_button_check_press
 
 // Apply the correct form of acceleration and friction
 var tempAccel, tempFric, tempSkid, tempVxMax;
-
-if (onGround) {  
-    tempAccel = groundAccel;
-    tempFric  = groundFric;
-    tempSkid  = groundSkid;
-    if (slope < 0) tempAccel  = dSlopeAccel+slope/16; 
-} else {
-    tempAccel = airAccel;
-    tempFric  = airFric;
-    tempSkid  = airSkid;
+if(!oGame.oldSchool)
+	if (onGround) {  
+	    tempAccel = groundAccel;
+	    tempFric  = groundFric;
+	    tempSkid  = groundSkid;
+	    if (slope < 0) tempAccel  = dSlopeAccel+slope/16; 
+	} else {
+	    tempAccel = airAccel;
+	    tempFric  = airFric;
+	    tempSkid  = airSkid;
+	}
+else if(oGame.oldSchool){
+	sprint = 0;
+		if (onGround) {  
+	    tempAccel = groundAccel;
+	    tempFric  = groundSkid;
+	    tempSkid  = groundFric;
+	    if (slope < 0) tempAccel  = dSlopeAccel+slope/16; 
+	} else {
+	    tempAccel = airAccel;
+	    tempFric  = airSkid;
+	    tempSkid  = airFric;
+	}
+}
+else if(false){
+		sprint = 0;
+	if (onGround) {  
+	    tempAccel = 0.0556640625;
+	    tempFric  = 0.05078125;
+	    tempSkid  = 0.1015625;
+	    //if (slope < 0) tempAccel  = dSlopeAccel+slope/16; 
+	} else {
+		if(vx>=1.5625){
+			tempAccel = 0.0556640625;
+			tempFric  = airFric;
+			tempSkid  = 0.0556640625;
+		}else{
+			tempAccel = 0.037109375;
+			tempFric  = airFric;
+			tempSkid  = 0.05078125;
+		}
+	}	
 }
 
 if slope > 0{
@@ -47,6 +79,10 @@ if slope > 0{
     tempVxMax = vxMaxSprint
 } else {
     tempVxMax = vxMax
+}
+
+if(oGame.oldSchool){
+	tempVxMax = 2.5625
 }
 
 if(walk) tempVxMax -= 1;

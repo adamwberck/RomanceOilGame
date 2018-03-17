@@ -32,7 +32,9 @@ if(instance_exists(oPlayer)){
 	draw_set_color(c_white);
 	draw_healthbar(20,40,guiW-20,60,oPlayer.sprint/.07,c_black,c_green,c_green,0,false,true);
 }
-
+if(oGame.oldSchool){
+	draw_sprite(sHappyCoin,0,50,50);
+}
 
 //var bcolor = make_colour_rgb(coins*4+40,coins*4+40,40);
 

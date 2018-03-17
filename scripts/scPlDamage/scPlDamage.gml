@@ -1,6 +1,6 @@
-//scEnDamage(damage)
+//scPlDamage(damage)
 var damage = argument0;
-if(!hurt){
+if(!hurt && oPlayerStats.hp>0){
     action=RUN;
     rotate=0;
     oPlayerStats.hp-= damage;

@@ -7,6 +7,13 @@ if(!onGround){
 	image_speed=0;
 }
 
+if(screenWrap){
+	var leftBorder = camera_get_view_x(view_camera[0])+16;
+	var rightBorder = leftBorder + camera_get_view_width(view_camera[0])-32;
+	var topBorder = camera_get_view_y(view_camera[0])+16;
+	var botBorder = topBorder + camera_get_view_height(view_camera[0])-32;	
+	draw_rectangle_width(leftBorder,topBorder,rightBorder,botBorder,true,c_blue);
+}
 
 if(ds_exists(trail,ds_type_list)){
 	//Draw Trail

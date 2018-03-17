@@ -3,6 +3,7 @@ if(scFreezeCheck() == true) exit;
 if(scPauseCheck()  == true) exit;
 
 ///Shell melee
+#region
 var en =0;
 if(pickup!=0){
 	//holding shell
@@ -26,8 +27,11 @@ if(pickup!=0){
         }
     }
 }
+#endregion
+
 
 ///Farore
+#region
 if(oPlayerStats.powerUp=oPlayerStats.Powers.farore){
 	var createPortal = kAction2Press  && kUp;
 	var teleport = kAction2Press && !kUp;
@@ -66,9 +70,7 @@ if(oPlayerStats.powerUp=oPlayerStats.Powers.farore){
 	faroreCharge=false;
 	instance_destroy(portal);
 }
-
-
-
+#endregion
 
 ///Spin Attack disabled
 #region
@@ -115,8 +117,45 @@ if(en!=noone){
 */
 #endregion
 
+///Screen Wrap
+#region
+if(oPlayerStats.powerUp=oPlayerStats.Powers.screenWrap){
+	if(kAction2Press){
+		screenWrap=true;
+	}
+	var leftBorder = camera_get_view_x(view_camera[0])+16;
+	var rightBorder = leftBorder + camera_get_view_width(view_camera[0])-32;
+	var topBorder = camera_get_view_y(view_camera[0])+16;
+	var botBorder = topBorder + camera_get_view_height(view_camera[0])-32;
+	if(kAction2Release){
+		screenWrap=false;
+	}
+	if(screenWrap){
+		if(y<topBorder||y>botBorder||x<leftBorder||x>rightBorder){
+			screenWrap=false;
+		}
+		if(x>rightBorder){
+			x=leftBorder;
+		}
+		if(x<leftBorder){
+			x=rightBorder;
+		}
+		if(y>botBorder){
+			y=topBorder;
+		}
+		if(y<topBorder){
+			y=botBorder;
+		}
+
+	}
+}
+else{
+	screenWrap =false;
+}
+#endregion
 
 ///Movement with collision
+#region
 // Handle sub-pixel movement
 cx += vx;
 cy += vy;
@@ -189,17 +228,23 @@ if (w>=5) {
     w=0;
     e=0;
 };
-
-// Pit death
-if (bbox_right < 0 || bbox_left > room_width || bbox_top > room_height || bbox_bottom < 0){
-    instance_destroy();
+#endregion
+// Forbid leaving Room
+if (x < 0){
+	x=0;
+}
+else if(x > room_width){
+	x=room_width;
 }
 
 /// Death
+if(y>room_height+60){
+	scPlDamage(10);
+}
 
-// Crushed by moving solid/
+// Crushed by solid/
 if (place_meeting(x, y, oParSolid)){
-	instance_destroy();
+	scPlDamage(10);
 }
 //hp==0
 if(oPlayerStats.hp<=0&&global.freeze==false){

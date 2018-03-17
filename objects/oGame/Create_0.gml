@@ -12,3 +12,5 @@ clicked   = mouse_check_button(mb_left);
 
 
 global.gameCheck = instance_number(oGame);
+
+oldSchool = false;

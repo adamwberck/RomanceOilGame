@@ -8,7 +8,8 @@
         "f0e159f3-26ba-4595-9c36-7975ccb97b6f",
         "9b56e6fb-2ebf-457a-b141-8952361d9a98",
         "7f8f8990-b5ba-42cc-9e87-a106e9b4cdb4",
-        "92bd3d7c-84cb-4d94-9237-7ab320653014"
+        "92bd3d7c-84cb-4d94-9237-7ab320653014",
+        "fe3a923c-8109-4114-920d-542fa491e52d"
     ],
     "filterType": "GMSprite",
     "folderName": "sNewPlayer",

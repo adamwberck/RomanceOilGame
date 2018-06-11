@@ -6,6 +6,15 @@ draw_text(30,20,string_hash_to_newline(hp));
 draw_text(30,40,string_hash_to_newline(coins));
 //draw_text(30,60,string_hash_to_newline(oPlayer.x-(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])) ));
 draw_text(30,60,string_hash_to_newline(oPlayer.x-camera_get_view_x(view_camera[0])));
+
+var sec  = (floor(timer/60))%60;
+var minu = floor(sec/60);
+//var tSt = string_format(tsec,2,0); var tSt = string_replace_all(tSt," ","0");
+var sSt = string_format(sec,2,0) ; var sSt = string_replace_all(sSt," ","0");
+var mSt = string_format(minu,2,0) ; var mSt = string_replace_all(mSt," ","0");
+draw_text(30,110,mSt+":"+sSt);
+timer++;
+
 draw_set_color(c_white);
 
 var guiH = display_get_gui_height();

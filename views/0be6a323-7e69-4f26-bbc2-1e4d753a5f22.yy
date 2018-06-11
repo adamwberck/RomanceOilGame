@@ -9,7 +9,7 @@
         "1cc5fcb5-0cd6-40ec-b212-354badb28abb"
     ],
     "filterType": "GMObject",
-    "folderName": "Player",
+    "folderName": "Corpse",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

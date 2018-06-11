@@ -1,7 +1,7 @@
 counter++;
 if(counter>20){
     image_angle+=20;
-    if(y>orginaly-35&& !down){
+    if(y>ystart-35&& !down){
         y-=3;
     }
     else{
@@ -9,4 +9,3 @@ if(counter>20){
         y+=3;
     }
 }
-

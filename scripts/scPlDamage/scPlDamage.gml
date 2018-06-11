@@ -12,7 +12,9 @@ if(!hurt && oPlayerStats.hp>0){
         global.freeze=true;
         
         if(oPlayerStats.hp<=0){
-            oGame.alarm[1] = abs((room_height-y+30));
+			var cam = view_camera[0];
+			var viewBot = camera_get_view_y(cam)+camera_get_view_height(cam)
+            oGame.alarm[1] = abs(viewBot-y+30);
             instance_create(x,y,oPlayerCorpse);
             visible=false;
         }else{

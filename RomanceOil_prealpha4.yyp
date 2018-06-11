@@ -986,7 +986,7 @@
             "Key": "80981df0-330c-4472-b5f4-6863b86db7c3",
             "Value": {
                 "id": "5ba68633-af23-46f8-8055-c8395105a9c7",
-                "resourcePath": "sprites\\sEnemy\\sEnemy.yy",
+                "resourcePath": "sprites\\sRedEnemy\\sRedEnemy.yy",
                 "resourceType": "GMSprite"
             }
         },

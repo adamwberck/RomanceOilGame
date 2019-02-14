@@ -283,6 +283,9 @@ if(!onGround&&!flytimer && oPlayerStats.powerUp="fly" && sprint==7){
 // Jump 
 if (kJump) { 
     if (onGround) {
+		if(sign(vx)==facing*-1){
+			vx+=(vx*.27);
+		}
         // Fall thru platform
         if (kDown) && (place_meeting(x, y + 1, oParJumpThru) && !place_meeting(x, y + 1, oParSolid)) {
                 ++y;

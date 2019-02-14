@@ -2,6 +2,21 @@
 if(scFreezeCheck() == true) exit;
 if(scPauseCheck()  == true) exit;
 
+
+if(global.isRecording){
+	tArray[global.time,0]= x;
+	tArray[global.time,1]= y;
+	tArray[global.time,2]= vx;
+	tArray[global.time,3]= vy;
+}
+if(global.isPlaying){
+	x  = tArray[global.time,0];
+	y  = tArray[global.time,1];
+	vx = tArray[global.time,2];
+	vy = tArray[global.time,3];
+	exit;
+}
+
 ///Movement with collision
 // Handle sub-pixel movement
 cx += vx;

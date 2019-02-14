@@ -12,6 +12,7 @@ enum Powers{
 	farore,
 	wallJump,
 	screenWrap,
+	time,
 }
 
 
@@ -29,3 +30,4 @@ ds_map_add(powerSprites,Powers.glide,sGreenRun);
 ds_map_add(powerSprites,Powers.farore,sPurpleRun);
 ds_map_add(powerSprites,Powers.wallJump,sGwhiteRun);
 ds_map_add(powerSprites,Powers.screenWrap,sBlueRun);
+ds_map_add(powerSprites,Powers.time,sOrangeRun1);

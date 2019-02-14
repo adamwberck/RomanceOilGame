@@ -1,7 +1,8 @@
 jumped = false;
 landed = false;
 moved = false;
-
+facing = 1;
+tArray = [0,0];
 q=0;
 r=0;
 

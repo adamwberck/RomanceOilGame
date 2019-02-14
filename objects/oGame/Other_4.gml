@@ -7,6 +7,10 @@ ycamo = 0;
 WIDTH = 448;
 HEIGHT = 208;
 
+global.isPlaying = false;
+global.isRecording = false;
+global.time = 0;
+
 
 window_set_min_width(WIDTH);
 window_set_min_height(HEIGHT);

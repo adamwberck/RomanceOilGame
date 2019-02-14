@@ -4,6 +4,7 @@ if(!hurt && oPlayerStats.hp>0){
     action=RUN;
     rotate=0;
     oPlayerStats.hp-= damage;
+
     state = scHurt;
     alarm[2] = 80;
     hurt = true;

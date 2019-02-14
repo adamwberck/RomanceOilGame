@@ -38,6 +38,16 @@ script_execute(state,tempSkid,tempVxMax,tempAccel);
 
 
 ///Death?
-if(hp<=0)
-instance_destroy();
-
+if(hp<=0){
+	if(global.isRecording||global.isPlaying){
+		dangerous=false;
+		image_alpha=0;
+	}
+	else{
+		instance_destroy();
+	}
+}
+else{
+	dangerous=true;
+	image_alpha=1;
+}

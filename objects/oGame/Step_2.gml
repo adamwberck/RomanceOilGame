@@ -21,7 +21,7 @@ if(oPlayerStats.powerUp != oPlayerStats.Powers.screenWrap || !oPlayer.screenWrap
 	var camL = camera_get_view_x(view_camera[0]);
 	var camR = camL+WIDTH;
 	var pushDis = 176;
-	var camSpd = 4;
+	var camSpd = max(4,oPlayer.vx);
 	if(xTo+pushDis>camR){
 		camX =Approach(camX,xTo+pushDis-WIDTH,camSpd);
 	}

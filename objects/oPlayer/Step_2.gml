@@ -29,6 +29,24 @@ if(pickup!=0){
 }
 #endregion
 
+///Time
+#region
+if(oPlayerStats.powerUp==Powers.time){
+	if(kAction){
+		global.isPlaying = true;
+		global.isRecording = false;
+	}
+	else{
+		global.isPlaying = false;
+		global.isRecording = true;
+	}
+}else{
+	global.isPlaying = false;
+	global.isRecording = false;
+	global.time =0;
+}
+#endregion
+
 
 ///Farore
 #region
@@ -156,6 +174,12 @@ else{
 
 ///Movement with collision
 #region
+
+if(scRecording()){
+	exit;
+}
+
+
 // Handle sub-pixel movement
 cx += vx;
 cy += vy;

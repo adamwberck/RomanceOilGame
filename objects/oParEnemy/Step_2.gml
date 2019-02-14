@@ -4,6 +4,12 @@ if(scPauseCheck()  == true) exit;
 
 ///Movement with collision
 // Handle sub-pixel movement
+
+if(scRecording()){
+	exit;
+}
+
+
 cx += vx;
 cy += vy;
 vxNew = round(cx);

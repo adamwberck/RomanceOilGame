@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "18fdff4d-3d02-48d6-8e1b-b09ed05737f4",
+            "Value": {
+                "id": "9e8ea2a7-3732-44f6-93ac-a915ab1969bb",
+                "resourcePath": "objects\\object55\\object55.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1b4b987e-a76a-4243-b961-606e21256e99",
             "Value": {
                 "id": "686efb1f-37d1-4175-8bf5-f78153ea798d",
@@ -1063,6 +1071,14 @@
             }
         },
         {
+            "Key": "90744aae-c428-46d1-b7f8-0432cc1d8a4d",
+            "Value": {
+                "id": "5f2b2abe-4471-4d67-ba75-e7ad4076e030",
+                "resourcePath": "scripts\\scRecording\\scRecording.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "91d5813b-8f0b-4e84-86a1-8ee9b3afa77a",
             "Value": {
                 "id": "a3948711-7085-458c-aee4-13e085a80999",
@@ -1415,6 +1431,14 @@
             }
         },
         {
+            "Key": "bd7619af-0482-49cc-8b58-03737673365a",
+            "Value": {
+                "id": "4aa56192-2a95-4845-ab15-d4d6b3cf8938",
+                "resourcePath": "sprites\\sOrangeClover\\sOrangeClover.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bf8bafb2-1e0f-4e32-9e71-6405dd364291",
             "Value": {
                 "id": "564bad1c-4276-41fc-b49c-dcebf54a96d5",
@@ -1588,6 +1612,22 @@
                 "id": "1bc14dbc-238f-410b-8d49-886a96cd3415",
                 "resourcePath": "rooms\\rmNewTest04\\rmNewTest04.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "d39c2ed6-9e69-4f6b-b7d9-9dc1ffd08587",
+            "Value": {
+                "id": "e3c4042d-1640-4926-a672-304a565fc780",
+                "resourcePath": "rooms\\rmTimeTest\\rmTimeTest.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "d40f3c63-e1ec-4b40-aae3-08c93752a9cd",
+            "Value": {
+                "id": "87cdb76d-b943-452c-bbe9-44eb4eca8b67",
+                "resourcePath": "sprites\\sOrangeRun1\\sOrangeRun1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1775,6 +1815,14 @@
             }
         },
         {
+            "Key": "edafb329-a749-44fb-903e-c0477e6a4f3c",
+            "Value": {
+                "id": "f5eba107-0238-4d64-8f4b-ea8e08e47062",
+                "resourcePath": "rooms\\rmLongLevel\\rmLongLevel.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "edc719e2-b559-4666-a041-d9546f8e281e",
             "Value": {
                 "id": "39c88552-6847-453f-8fc7-35294697d6cc",
@@ -1863,6 +1911,14 @@
             }
         },
         {
+            "Key": "fa1a4350-c6f7-4e4f-b6f3-fa0ce60d1e3e",
+            "Value": {
+                "id": "1fca4df9-e980-45d3-944d-d894b4fa420f",
+                "resourcePath": "objects\\oTime\\oTime.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fac4a81b-4638-481e-b21d-948ffae3e8f3",
             "Value": {
                 "id": "9c461f2e-94ac-40ee-aced-ab988f5cb27b",
@@ -1946,7 +2002,8 @@
         "fac4a81b-4638-481e-b21d-948ffae3e8f3",
         "86154489-5f31-481e-9e07-700f4f092354",
         "439b578f-13c0-44bc-a998-13bd9a72c706",
-        "2b674eac-4334-4dd8-a536-0fa0cdfcaf4a"
+        "2b674eac-4334-4dd8-a536-0fa0cdfcaf4a",
+        "90744aae-c428-46d1-b7f8-0432cc1d8a4d"
     ],
     "tutorial": ""
 }
